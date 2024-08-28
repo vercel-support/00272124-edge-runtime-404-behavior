@@ -8,9 +8,7 @@ export const config = {
 
 export async function handler() {
   const response = await testRequest();
-  const data = await response.json();
   return NextResponse.json({
-    data,
     status: response.status,
   });
 }
